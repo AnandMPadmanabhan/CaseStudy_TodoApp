@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>To-do SignIn</title>
+    <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="./css/signin.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="./css/bootstrap.min.js"></script>
+  <script src="./js/login.js"></script>
+</head>
+<body>
+    <div class="container-fluid container1">
+        <h1 style="text-align: center;">To-Do Application</h1>
+        <div class="row">
+            <div class="col-lg-8">
+                <img id="todoImg" src="./images/todo-image.jpg"/>
+            </div>
+            <div class="col-lg-4 signInform">
+                <h4>Sign In</h4>
+                <form onsubmit=" return OnClickListener()" action="./todo.html">
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">Email address</label>
+                      <input type="text" class="form-control" id="uname" placeholder="Enter username">
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleInputPassword1">Password</label>
+                      <input type="password" class="form-control" id="pwd" placeholder="Password">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Sign In</button>
+                    <p id="error"></p>
+                  </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
