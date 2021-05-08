@@ -12,11 +12,11 @@ $(document).ready(function () {
     })
   }
   else {
-    $(location).attr('href', 'http://127.0.0.1:5501/index.html')
+    $(location).attr('href', window.location.origin+'/index.html')
   }
   $('#logout').click(function () {
     localStorage.removeItem('user');
-    $(location).attr('href', 'http://127.0.0.1:5501/index.html')
+    $(location).attr('href', window.location.origin+'/index.html')
   })
 
 });
