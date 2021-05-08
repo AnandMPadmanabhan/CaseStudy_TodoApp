@@ -1,4 +1,6 @@
 $(document).ready(function () {
+  var url=window.location.pathname.split('/')
+  var redirect=window.location.pathname.replace(url[url.length-1],"index.html")
   if (localStorage.getItem('user')) {
     fetchdata().then(function () {
       counter().then(function (c) {
@@ -12,11 +14,11 @@ $(document).ready(function () {
     })
   }
   else {
-    $(location).attr('href', window.location.origin+'/index.html')
+    $(location).attr('href', window.location.origin+redirect)
   }
   $('#logout').click(function () {
     localStorage.removeItem('user');
-    $(location).attr('href', window.location.origin+'/index.html')
+    $(location).attr('href', window.location.origin+redirect)
   })
 
 });
