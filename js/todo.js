@@ -69,7 +69,6 @@ function counter() {
     const btn = document.querySelectorAll('#todo-check');
     btn.forEach((chk) => {
       chk.addEventListener('change', (event) => {
-        console.log("Here" + count)
         if (event.currentTarget.checked) {
           var rowId = event.target.parentNode.parentNode.id
           count++
@@ -87,7 +86,6 @@ function counter() {
           var data = document.getElementById(rowId).querySelectorAll(".row-data");
           var name = data[0].innerHTML;
           const index = completed.indexOf(name);
-          console.log(index)
           if (index > -1) {
             completed.splice(index, 1);
           }
@@ -97,12 +95,4 @@ function counter() {
     })
 
   })
-}
-
-function getCompleted(e) {
-  var rowId = e.id;
-  var data = document.getElementById(rowId).querySelectorAll(".row-data");
-  var name = data[0].innerHTML;
-  completed.push(name)
-  console.log(completed)
 }
